@@ -13,6 +13,7 @@ const Contact = () => {
         <div className="contact-page">
             <div className="contact-bg-glow glow-1"></div>
             <div className="contact-bg-glow glow-2"></div>
+            <div className="contact-bg-glow glow-3"></div>
 
             <div className="contact-container">
                 <div className="contact-header">
@@ -60,18 +61,16 @@ const Contact = () => {
                         <div className="card-icon-wrapper">
                             <ShieldCheck size={28} />
                         </div>
-                        <div className="security-content">
-                            <h2 className="card-title">Legal & Security</h2>
-                            <p className="card-desc">Data privacy and security reports.</p>
-                            <a
-                                href="mailto:compliance@shopmunim.com"
-                                className="contact-button btn-nexus"
-                                onClick={(e) => handleEmailClick(e, 'compliance@shopmunim.com')}
-                            >
-                                <span>compliance@shopmunim.com</span>
-                                <ArrowRight size={18} />
-                            </a>
-                        </div>
+                        <h2 className="card-title">Legal & Security</h2>
+                        <p className="card-desc">Data privacy and security reports.</p>
+                        <a
+                            href="mailto:compliance@shopmunim.com"
+                            className="contact-button btn-nexus"
+                            onClick={(e) => handleEmailClick(e, 'compliance@shopmunim.com')}
+                        >
+                            <span>compliance@shopmunim.com</span>
+                            <ArrowRight size={18} />
+                        </a>
                     </div>
                 </div>
 
