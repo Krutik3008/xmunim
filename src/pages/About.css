@@ -175,16 +175,13 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .about-grid {
         grid-template-columns: 1fr;
     }
 
-    .vision-card,
-    .why-card,
     .initiative-card {
         grid-column: auto;
-        grid-row: auto;
     }
 }
 

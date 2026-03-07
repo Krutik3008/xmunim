@@ -236,16 +236,13 @@ a.btn-nexus:focus {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    .support-card,
-    .business-card,
     .security-card {
         grid-column: auto;
-        grid-row: auto;
     }
 }
 
