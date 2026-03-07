@@ -116,34 +116,27 @@
     }
 
     .feature-card {
-        padding: 1.25rem;
-        /* Reduced padding from 1.5rem */
-        border-radius: 20px;
-        /* Tighter corners */
+        padding: 1rem 0.8rem;
+        /* Shorter and narrower internal space */
+        border-radius: 16px;
     }
 
     .feature-icon {
-        width: 48px;
-        /* Scaled down from 56px */
-        height: 48px;
-        margin-bottom: 1rem;
-        border-radius: 12px;
+        width: 44px;
+        /* Even smaller icon */
+        height: 44px;
+        margin-bottom: 0.75rem;
+        border-radius: 10px;
     }
 
     .feature-title {
-        font-size: 1.2rem;
-        /* Scaled down from 1.35rem */
-        margin-bottom: 0.5rem;
-    }
-
-    .feature-desc {
-        font-size: 0.9rem;
-        /* Scaled down from 0.95rem */
-        line-height: 1.5;
+        font-size: 1.15rem;
+        margin-bottom: 0.4rem;
     }
 
     .features-grid {
-        gap: 1rem;
-        /* Tighter gap between cards */
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+        /* Narrower max box width */
+        gap: 0.75rem;
     }
 }
