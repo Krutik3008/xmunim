@@ -32,8 +32,8 @@ const Footer = () => {
                         </div>
                         <div className="link-group">
                             <h4>Company</h4>
-                            <a href="#">About</a>
-                            <a href="#">Contact</a>
+                            <Link to="/about">About</Link>
+                            <Link to="/contact">Contact</Link>
                         </div>
                         <div className="link-group store-links-group">
                             <h4>Get the App</h4>
@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p className="copyright">&copy; {new Date().getFullYear()} ShopMunim. All rights reserved.</p>
+                    <p className="copyright">© 2026 DEC24 INNOVATIONS PVT LTD. All rights reserved.</p>
                     <div className="legal-links">
                         <Link to="/privacy-policy">Privacy Policy</Link>
                         <Link to="/terms-conditions">Terms of Service</Link>

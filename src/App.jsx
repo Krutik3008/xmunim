@@ -8,6 +8,8 @@ import Showcase from './components/Showcase';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsCondition from './pages/TermsCondition';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 // Scroll handler for routes and sections
 const ScrollHandler = () => {
@@ -58,6 +60,8 @@ function App() {
         <Route path="/features" element={<Home />} />
         <Route path="/security" element={<Home />} />
         <Route path="/showcase" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsCondition />} />
       </Routes>
