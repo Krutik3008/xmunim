@@ -43,8 +43,8 @@ const Navbar = () => {
                     )}
                 </div>
 
-                <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <X size={28} color="#ffffff" /> : <Menu size={28} color="#ffffff" />}
+                <button className={`mobile-menu-btn ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <X size={28} color="#ffffff" className="nav-icon" /> : <Menu size={28} color="#ffffff" className="nav-icon" />}
                 </button>
             </div>
         </nav>

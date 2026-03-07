@@ -45,11 +45,11 @@ const About = () => {
                 </div>
 
                 <div className="about-footer">
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '20px' }}>
-                        <Globe size={24} color="var(--color-secondary)" />
-                        <span style={{ fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '1rem', color: '#fff' }}>Global Standards, Local Impact</span>
+                    <div className="card-icon-wrapper">
+                        <Globe size={28} />
                     </div>
-                    <p>Designed with ❤️ for the future of retail. Built on trust, scaled with technology, and dedicated to the success of millions of Indian shopkeepers.</p>
+                    <h2 className="card-title">Global Standards, Local Impact</h2>
+                    <p className="card-desc">Designed with ❤️ for the future of retail. Built on trust, scaled with technology, and dedicated to the success of millions of Indian shopkeepers.</p>
                 </div>
             </div>
         </div>
