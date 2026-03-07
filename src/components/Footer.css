@@ -1,0 +1,207 @@
+.footer {
+    background-color: #01060e;
+    padding: var(--spacing-xxl) 0 var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-tagline {
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-sm);
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--spacing-xxl);
+}
+
+.link-group h4 {
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.link-group a {
+    display: block;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.95rem;
+}
+
+.link-group a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+
+.legal-links a:hover {
+    color: var(--color-text-main);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--spacing-xl) 0 var(--spacing-lg);
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        opacity: 0.8;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1rem;
+        justify-content: flex-start;
+        width: 100%;
+        text-align: left;
+    }
+
+    .link-group h4 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+    }
+
+    .link-group a {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .store-links-group {
+        grid-column: 1 / -1;
+        align-items: flex-start;
+        text-align: left;
+        margin-top: 1.5rem;
+        /* Add some space above when moved down */
+    }
+
+    .store-links-group h4 {
+        font-size: 1.1rem;
+        text-transform: none;
+        letter-spacing: normal;
+        margin-bottom: 1rem;
+    }
+
+    .footer-store-badges {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .footer-store-badges .store-badge-link {
+        flex: 0 0 auto;
+        /* Don't grow */
+        width: auto;
+    }
+
+    .store-badge {
+        display: inline-flex;
+        width: auto;
+        height: 48px;
+        padding: 0 14px 0 8px;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .store-icon-wrapper {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .store-icon {
+        width: 18px !important;
+        /* Force identical icon scales */
+        height: 18px !important;
+    }
+
+    .badge-small {
+        font-size: 0.55rem;
+    }
+
+    .badge-large {
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        gap: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .legal-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .legal-links a,
+    .copyright {
+        font-size: 0.8rem;
+    }
+}

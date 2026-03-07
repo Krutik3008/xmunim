@@ -1,0 +1,308 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.15) 0%, rgba(2, 12, 27, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xxl);
+}
+
+.hero-text-area {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: -1.5px;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xl);
+    max-width: 500px;
+}
+
+/* Store Badges */
+.store-badges {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.store-badge-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.store-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all var(--transition-normal);
+    height: auto;
+}
+
+.store-badge:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.apple-badge,
+.store-badge {
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 8px 16px;
+    /* Balanced padding */
+    display: inline-flex;
+    /* Shrink to content */
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    height: 52px;
+    /* Slightly shorter for a tighter look */
+    justify-content: flex-start;
+}
+
+.store-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.store-icon {
+    width: 24px !important;
+    /* Force same size for both icons */
+    height: 24px !important;
+    flex-shrink: 0;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.badge-small {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #ffffff;
+    opacity: 0.7;
+    white-space: nowrap;
+    text-transform: none;
+    /* User's custom text should stay as-is */
+}
+
+.badge-large {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+    font-family: var(--font-body);
+}
+
+/* App Mockup Animation */
+.hero-image-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.app-mockup {
+    width: 320px;
+    height: 650px;
+    background: linear-gradient(135deg, rgba(17, 34, 64, 0.8), rgba(2, 12, 27, 0.9));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 255, 204, 0.05);
+    transform: rotateY(-15deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+
+.app-mockup:hover {
+    transform: rotateY(-5deg) rotateX(2deg);
+}
+
+.mockup-header {
+    height: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dots {
+    display: flex;
+    gap: 5px;
+}
+
+.dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mockup-item {
+    height: 60px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 15px 25px;
+    border-radius: 16px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-text-main);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    animation: float 6s ease-in-out infinite;
+}
+
+.c1 {
+    top: 100px;
+    left: -80px;
+    animation-delay: 0s;
+}
+
+.c2 {
+    bottom: 150px;
+    right: -60px;
+    animation-delay: 2s;
+    color: var(--color-secondary);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero-title {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .store-badges {
+        justify-content: center;
+    }
+
+    .app-mockup {
+        transform: none;
+        margin-top: 60px;
+    }
+
+    .app-mockup:hover {
+        transform: translateY(-10px);
+    }
+
+    .c1,
+    .c2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+        line-height: 1.2;
+        padding: 0 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .store-badges {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .store-badge-link {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .store-badge {
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .app-mockup {
+        display: none;
+        /* Hide empty card element completely on mobile and rely on Showcase below */
+    }
+}
