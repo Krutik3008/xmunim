@@ -5,11 +5,15 @@ import { Info } from 'lucide-react';
 const PrivacyPolicy = () => {
     return (
         <div className="legal-page">
-            <div className="container">
-                <div className="legal-header text-center">
+            <div className="legal-bg-glow glow-1"></div>
+            <div className="legal-bg-glow glow-2"></div>
+            <div className="legal-bg-glow glow-3"></div>
+
+            <div className="legal-container">
+                <div className="legal-header">
                     <h1 className="legal-title">Privacy Protocol</h1>
                     <div className="info-banner">
-                        <Info className="info-icon" size={20} color="#00FFCC" />
+                        <Info className="info-icon" size={20} />
                         <span className="last-updated">Status: Active (Last Updated Feb 2026)</span>
                     </div>
                     <p className="section-label">LEGAL COMPLIANCE</p>

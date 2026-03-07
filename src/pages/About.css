@@ -1,4 +1,4 @@
-.legal-page {
+.about-page {
     padding: 140px 0 80px;
     min-height: 100vh;
     position: relative;
@@ -7,7 +7,7 @@
 }
 
 /* Futuristic Mesh Background */
-.legal-bg-glow {
+.about-bg-glow {
     position: absolute;
     width: 600px;
     height: 600px;
@@ -54,20 +54,20 @@
     }
 }
 
-.legal-container {
+.about-container {
     position: relative;
     z-index: 1;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-.legal-header {
+.about-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.legal-title {
+.about-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
     letter-spacing: -1.5px;
@@ -78,7 +78,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.info-banner {
+.about-subtitle {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -89,24 +89,17 @@
     color: var(--color-secondary);
     font-weight: 600;
     font-size: 0.9rem;
-    margin-bottom: 20px;
 }
 
-.section-label {
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.legal-content {
-    display: flex;
-    flex-direction: column;
+/* Bento-style Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    margin-top: 40px;
 }
 
-.policy-section {
+.about-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 24px;
@@ -115,80 +108,96 @@
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
-.policy-section:hover {
+.about-card:hover {
     border-color: rgba(59, 130, 246, 0.3);
     background: rgba(255, 255, 255, 0.03);
-    transform: translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.policy-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.number-badge {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    color: var(--color-secondary);
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    font-size: 0.9rem;
+    margin-bottom: 24px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--color-secondary);
 }
 
-.policy-title {
+.card-title {
     font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 12px;
     color: #fff;
 }
 
-.policy-body p {
+.card-desc {
     color: var(--color-text-muted);
-    line-height: 1.7;
-    font-size: 1.05rem;
-}
-
-.legal-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.legal-footer p {
-    color: var(--color-text-muted);
-    font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.about-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.about-footer p {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .initiative-card {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-card,
+    .why-card,
+    .initiative-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
 }
 
 @media (max-width: 600px) {
-    .legal-page {
+    .about-page {
         padding: 100px 0 60px;
     }
 
-    .legal-title {
+    .about-title {
         font-size: 2.2rem;
     }
 
-    .policy-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .section-label {
-        margin-top: 20px;
-    }
-
-    .policy-section {
-        padding: 24px;
+    .about-card {
+        padding: 30px 20px;
     }
 }
