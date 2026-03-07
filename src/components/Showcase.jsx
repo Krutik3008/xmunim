@@ -107,25 +107,40 @@ const Showcase = () => {
 
     const handleScroll = () => {
         if (!scrollRef.current) return;
-        
+
         const container = scrollRef.current;
         const scrollPosition = container.scrollLeft;
         const centerPosition = scrollPosition + container.clientWidth / 2;
-        
-        // Assume all items have roughly the same width. 
-        // 320px width + 40px gap = 360px per item
-        const itemWidth = 360; 
-        
-        // Find closest index
+
+        const itemWidth = 360;
+
         const index = Math.max(0, Math.min(
-            showcaseItems.length - 1, 
+            showcaseItems.length - 1,
             Math.floor((centerPosition - container.clientWidth / 2 + itemWidth / 2) / itemWidth)
         ));
-        
+
         if (index !== activeIndex) {
             setActiveIndex(index);
         }
     };
+
+    // Auto-scroll logic
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!scrollRef.current) return;
+
+            const nextIndex = (activeIndex + 1) % showcaseItems.length;
+            const itemWidth = 360;
+
+            scrollRef.current.scrollTo({
+                left: nextIndex * itemWidth,
+                behavior: 'smooth'
+            });
+            setActiveIndex(nextIndex);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [activeIndex]);
 
     return (
         <section className="section showcase-section" id="showcase">
@@ -140,32 +155,32 @@ const Showcase = () => {
 
             <div className="showcase-container">
                 {/* Decorative background blur */}
-                <div 
-                    className="showcase-glow" 
+                <div
+                    className="showcase-glow"
                     style={{ backgroundColor: showcaseItems[activeIndex].color }}
                 ></div>
 
-                <div 
-                    className="showcase-scroll-area" 
+                <div
+                    className="showcase-scroll-area"
                     ref={scrollRef}
                     onScroll={handleScroll}
                 >
                     <div className="showcase-padder left"></div>
                     {showcaseItems.map((item, index) => (
-                        <PhoneFrame 
-                            key={item.id} 
-                            item={item} 
-                            isActive={index === activeIndex} 
+                        <PhoneFrame
+                            key={item.id}
+                            item={item}
+                            isActive={index === activeIndex}
                         />
                     ))}
                     <div className="showcase-padder right"></div>
                 </div>
-                
+
                 {/* Scroll Indicators */}
                 <div className="scroll-indicators">
                     {showcaseItems.map((_, idx) => (
-                        <span 
-                            key={idx} 
+                        <span
+                            key={idx}
                             className={`indicator-dot ${idx === activeIndex ? 'active' : ''}`}
                             onClick={() => {
                                 if (scrollRef.current) {
