@@ -344,4 +344,18 @@
     .showcase-padder {
         flex: 0 0 calc(50vw - 140px - 20px);
     }
+
+    .label-title {
+        margin-bottom: 0;
+        line-height: 1.1;
+    }
+
+    .label-desc {
+        line-height: 1.1;
+    }
+
+    .scroll-indicators {
+        margin-top: -1rem;
+        margin-bottom: 2.1rem;
+    }
 }

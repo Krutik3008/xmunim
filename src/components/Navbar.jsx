@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Wallet, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
@@ -7,7 +7,8 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
-    const isHome = location.pathname === '/';
+    const navigate = useNavigate();
+    const isHome = location.pathname === '/' || ['/features', '/security', '/showcase'].includes(location.pathname);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,6 +17,12 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const scrollToSection = (e, id) => {
+        e.preventDefault();
+        navigate('/' + id);
+        setIsOpen(false);
+    };
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -27,9 +34,9 @@ const Navbar = () => {
                 <div className={`nav-links ${isOpen ? 'active' : ''}`}>
                     {isHome ? (
                         <>
-                            <a href="#features" className="nav-link" onClick={() => setIsOpen(false)}>Features</a>
-                            <a href="#security" className="nav-link" onClick={() => setIsOpen(false)}>Security</a>
-                            <a href="#showcase" className="nav-link" onClick={() => setIsOpen(false)}>App Showcase</a>
+                            <a href="#features" className="nav-link" onClick={(e) => scrollToSection(e, 'features')}>Features</a>
+                            <a href="#security" className="nav-link" onClick={(e) => scrollToSection(e, 'security')}>Security</a>
+                            <a href="#showcase" className="nav-link" onClick={(e) => scrollToSection(e, 'showcase')}>App Showcase</a>
                         </>
                     ) : (
                         <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>Home</Link>

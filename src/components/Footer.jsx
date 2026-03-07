@@ -1,9 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Wallet } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
+    const navigate = useNavigate();
+
+    const scrollToSection = (e, id) => {
+        e.preventDefault();
+        navigate('/' + id);
+    };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -19,9 +26,9 @@ const Footer = () => {
                     <div className="footer-links">
                         <div className="link-group">
                             <h4>Product</h4>
-                            <a href="/#features">Features</a>
-                            <a href="/#security">Security</a>
-                            <a href="/#showcase">App Showcase</a>
+                            <a href="#features" onClick={(e) => scrollToSection(e, 'features')}>Features</a>
+                            <a href="#security" onClick={(e) => scrollToSection(e, 'security')}>Security</a>
+                            <a href="#showcase" onClick={(e) => scrollToSection(e, 'showcase')}>App Showcase</a>
                         </div>
                         <div className="link-group">
                             <h4>Company</h4>

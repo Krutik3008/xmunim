@@ -9,11 +9,29 @@ import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsCondition from './pages/TermsCondition';
 
-// Scroll to top component
-const ScrollToTop = () => {
+// Scroll handler for routes and sections
+const ScrollHandler = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    const sectionIds = ['features', 'security', 'showcase'];
+    const sectionId = pathname.substring(1); // Remove leading slash
+
+    if (sectionIds.includes(sectionId)) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        return;
+      }
+    }
+
+    // Default scroll to top for regular pages
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -33,10 +51,13 @@ const Home = () => (
 function App() {
   return (
     <>
-      <ScrollToTop />
+      <ScrollHandler />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/features" element={<Home />} />
+        <Route path="/security" element={<Home />} />
+        <Route path="/showcase" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsCondition />} />
       </Routes>
