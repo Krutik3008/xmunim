@@ -140,42 +140,39 @@
 
     .footer-store-badges {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
+        flex-direction: column;
+        /* Vertical stack for mobile */
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
         width: 100%;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     .footer-store-badges .store-badge-link {
         flex: 0 0 auto;
-        /* Don't grow */
-        width: auto;
+        width: 165px;
+        /* Fixed uniform width */
     }
 
     .store-badge {
         display: inline-flex;
-        width: auto;
-        height: 48px;
-        padding: 0 14px 0 8px;
-        justify-content: flex-start;
+        width: 100%;
+        height: 50px;
+        /* Fixed uniform height */
+        padding: 0 12px;
+        justify-content: center;
         gap: 8px;
     }
 
     .store-icon-wrapper {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
+        width: 26px;
+        height: 26px;
     }
 
     .store-icon {
-        width: 18px !important;
-        /* Force identical icon scales */
-        height: 18px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 
     .badge-small {

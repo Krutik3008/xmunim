@@ -48,10 +48,26 @@ const Hero = () => {
                         </div>
                         <div className="mockup-body">
                             <div className="mockup-transaction-list">
-                                <div className="mockup-item"></div>
-                                <div className="mockup-item"></div>
-                                <div className="mockup-item"></div>
-                                <div className="mockup-item"></div>
+                                <div className="mockup-item">
+                                    <div className="skeleton-line sm"></div>
+                                    <div className="skeleton-line lg"></div>
+                                </div>
+                                <div className="mockup-item">
+                                    <div className="skeleton-line sm"></div>
+                                    <div className="skeleton-line lg"></div>
+                                </div>
+                                <div className="mockup-item">
+                                    <div className="skeleton-line sm"></div>
+                                    <div className="skeleton-line lg"></div>
+                                </div>
+                                <div className="mockup-item">
+                                    <div className="skeleton-line sm"></div>
+                                    <div className="skeleton-line lg"></div>
+                                </div>
+                                <div className="mockup-item">
+                                    <div className="skeleton-line sm"></div>
+                                    <div className="skeleton-line lg"></div>
+                                </div>
                             </div>
                         </div>
                         {/* Floating elements for visual depth inspired by CRED/Teamcamp */}

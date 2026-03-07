@@ -82,15 +82,16 @@
     background: #000000;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
-    padding: 8px 16px;
-    /* Balanced padding */
+    padding: 0 16px;
+    /* Horizontal padding only since height is fixed */
     display: inline-flex;
-    /* Shrink to content */
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     transition: all 0.3s ease;
-    height: 52px;
-    /* Slightly shorter for a tighter look */
+    width: 190px;
+    /* Fixed width for perfect symmetry */
+    height: 56px;
+    /* Fixed height for perfect symmetry */
     justify-content: flex-start;
 }
 
@@ -105,9 +106,9 @@
 
 .store-icon {
     width: 24px !important;
-    /* Force same size for both icons */
     height: 24px !important;
     flex-shrink: 0;
+    display: block;
 }
 
 .badge-text {
@@ -188,6 +189,40 @@
     border-radius: 12px;
     margin-bottom: 15px;
     border: 1px solid rgba(255, 255, 255, 0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    gap: 8px;
+}
+
+.skeleton-line {
+    height: 6px;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.05) 25%,
+            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.05) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 2s infinite linear;
+    border-radius: 3px;
+}
+
+.skeleton-line.sm {
+    width: 40%;
+}
+
+.skeleton-line.lg {
+    width: 80%;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .floating-card {
@@ -235,74 +270,130 @@
     .hero-content {
         flex-direction: column;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 20px;
+        gap: 60px;
+        /* Increased gap */
     }
 
     .hero-title {
         margin-left: auto;
         margin-right: auto;
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
     }
 
     .hero-subtitle {
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: var(--spacing-xl);
     }
 
     .store-badges {
         justify-content: center;
+        gap: 15px;
     }
 
     .app-mockup {
-        transform: none;
-        margin-top: 60px;
-    }
-
-    .app-mockup:hover {
-        transform: translateY(-10px);
+        transform: rotateY(-5deg) rotateX(2deg);
+        /* Subtle tilt */
+        margin-top: 20px;
     }
 
     .c1,
     .c2 {
-        display: none;
+        display: block;
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        opacity: 0.95;
+    }
+
+    .c1 {
+        top: 30px;
+        left: -30px;
+    }
+
+    .c2 {
+        bottom: 120px;
+        right: -20px;
     }
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 100px;
+        padding-top: 80px;
+        padding-bottom: 40px;
     }
 
     .hero-title {
-        font-size: 2.1rem;
-        line-height: 1.2;
-        padding: 0 10px;
+        font-size: 2.5rem;
+        line-height: 1.1;
+        padding: 0 15px;
+        margin-bottom: var(--spacing-md);
+        font-weight: 800;
+        letter-spacing: -2px;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        padding: 0 20px;
+        margin-bottom: var(--spacing-xl);
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
     }
 
     .store-badges {
         flex-direction: column;
+        /* Vertical stack for mobile */
+        justify-content: center;
         align-items: center;
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
+        gap: 15px;
+        padding: 0 15px;
     }
 
     .store-badge-link {
-        width: 100%;
-        max-width: 250px;
+        width: 175px;
+        /* Fixed uniform width */
     }
 
     .store-badge {
         justify-content: center;
         width: 100%;
-        box-sizing: border-box;
+        height: 52px;
+        /* Fixed uniform height */
+        padding: 0 12px;
+        gap: 8px;
+    }
+
+    .store-icon-wrapper {
+        width: 28px;
+        height: 28px;
+    }
+
+    .store-icon {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .badge-large {
+        font-size: 0.9rem;
+    }
+
+    .badge-small {
+        font-size: 0.55rem;
     }
 
     .app-mockup {
-        display: none;
-        /* Hide empty card element completely on mobile and rely on Showcase below */
+        display: block;
+        width: 260px;
+        height: 540px;
+        /* Slightly taller to accommodate more items */
+        margin: 10px auto 0;
+        margin-bottom: 50px;
+        border-radius: 35px;
+        padding: 12px;
+    }
+
+    .mockup-item {
+        height: 55px;
+        margin-bottom: 10px;
     }
 }
