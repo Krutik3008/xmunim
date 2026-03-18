@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="footer-brand">
                         <Link to="/" className="logo">
                             <Wallet className="logo-icon" size={24} color="#3B82F6" strokeWidth={2.5} />
-                            <span className="logo-text">ShopMunim</span>
+                            <span className="logo-text">XMunim</span>
                         </Link>
                         <p className="footer-tagline">The Operating System for Modern Businesses.</p>
                     </div>

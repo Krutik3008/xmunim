@@ -34,9 +34,9 @@ const Contact = () => {
                         <a
                             href="mailto:support@shopmunim.com"
                             className="contact-button btn-nexus"
-                            onClick={(e) => handleEmailClick(e, 'support@shopmunim.com')}
+                            onClick={(e) => handleEmailClick(e, 'support@xmunim.com')}
                         >
-                            <span>support@shopmunim.com</span>
+                            <span>support@xmunim.com</span>
                             <ArrowRight size={18} />
                         </a>
                     </div>
@@ -48,11 +48,11 @@ const Contact = () => {
                         <h2 className="card-title">Business & Partners</h2>
                         <p className="card-desc">Looking to scale your retail chain or integrate our API? Connect with our business development team.</p>
                         <a
-                            href="mailto:business@shopmunim.com"
+                            href="mailto:business@xmunim.com"
                             className="contact-button btn-nexus"
-                            onClick={(e) => handleEmailClick(e, 'business@shopmunim.com')}
+                            onClick={(e) => handleEmailClick(e, 'business@xmunim.com')}
                         >
-                            <span>business@shopmunim.com</span>
+                            <span>business@xmunim.com</span>
                             <ArrowRight size={18} />
                         </a>
                     </div>
@@ -64,11 +64,11 @@ const Contact = () => {
                         <h2 className="card-title">Legal & Security</h2>
                         <p className="card-desc">Data privacy and security reports.</p>
                         <a
-                            href="mailto:compliance@shopmunim.com"
+                            href="mailto:compliance@xmunim.com"
                             className="contact-button btn-nexus"
-                            onClick={(e) => handleEmailClick(e, 'compliance@shopmunim.com')}
+                            onClick={(e) => handleEmailClick(e, 'compliance@xmunim.com')}
                         >
-                            <span>compliance@shopmunim.com</span>
+                            <span>compliance@xmunim.com</span>
                             <ArrowRight size={18} />
                         </a>
                     </div>

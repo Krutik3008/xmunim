@@ -26,7 +26,7 @@ const TermsCondition = () => {
                             <h2 className="policy-title">Acceptance of Terms</h2>
                         </div>
                         <div className="policy-body">
-                            <p>By using ShopMunim, you agree to these terms and conditions. If you do not agree, please discontinue use of the application.</p>
+                            <p>By using XMunim, you agree to these terms and conditions. If you do not agree, please discontinue use of the application.</p>
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@ const TermsCondition = () => {
                             <h2 className="policy-title">Accurate Records</h2>
                         </div>
                         <div className="policy-body">
-                            <p>ShopMunim is a tool for record-keeping. While we provide secure storage, users are responsible for verifying transaction amounts and settlements with shop owners.</p>
+                            <p>XMunim is a tool for record-keeping. While we provide secure storage, users are responsible for verifying transaction amounts and settlements with shop owners.</p>
                         </div>
                     </div>
 
@@ -56,13 +56,13 @@ const TermsCondition = () => {
                             <h2 className="policy-title">Disclaimer</h2>
                         </div>
                         <div className="policy-body">
-                            <p>ShopMunim provides the service 'as is' and is not liable for disputes between customers and shop owners regarding ledger balances.</p>
+                            <p>XMunim provides the service 'as is' and is not liable for disputes between customers and shop owners regarding ledger balances.</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="legal-footer">
-                    <p>Questions regarding our terms of service? <br /> Reach out to our compliance team at support@shopmunim.com</p>
+                    <p>Questions regarding our terms of service? <br /> Reach out to our compliance team at support@xmunim.com</p>
                 </div>
             </div>
         </div>

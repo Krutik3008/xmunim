@@ -14,7 +14,7 @@ const TrustSection = () => {
                             Accountable.
                         </h2>
                         <p className="trust-desc">
-                            ShopMunim ensures every credit and payment is recorded instantly. Built with Role-Based Access for Shop Owners, Customers, and Admins to ensure your business numbers and ledgers are always accurate and secure.
+                            XMunim ensures every credit and payment is recorded instantly. Built with Role-Based Access for Shop Owners, Customers, and Admins to ensure your business numbers and ledgers are always accurate and secure.
                         </p>
                         <div className="stats-row">
                             <div className="stat-item">

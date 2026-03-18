@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className="container nav-content">
                 <Link to="/" className="logo">
                     <Wallet className="logo-icon" size={24} color="#3B82F6" strokeWidth={2.5} />
-                    <span className="logo-text">ShopMunim</span>
+                    <span className="logo-text">XMunim</span>
                 </Link>
                 <div className={`nav-links ${isOpen ? 'active' : ''}`}>
                     {isHome ? (

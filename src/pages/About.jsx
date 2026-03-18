@@ -24,14 +24,14 @@ const About = () => {
                             <Rocket size={28} />
                         </div>
                         <h2 className="card-title">Our Vision</h2>
-                        <p className="card-desc">Founded in 2024, ShopMunim aims to replace traditional paper-based ledger systems with a sleek, 256-bit encrypted digital ecosystem that empowers shop owners and customers alike through transparency and security.</p>
+                        <p className="card-desc">Founded in 2024, XMunim aims to replace traditional paper-based ledger systems with a sleek, 256-bit encrypted digital ecosystem that empowers shop owners and customers alike through transparency and security.</p>
                     </div>
 
                     <div className="about-card why-card">
                         <div className="card-icon-wrapper">
                             <Zap size={28} />
                         </div>
-                        <h2 className="card-title">Why ShopMunim?</h2>
+                        <h2 className="card-title">Why XMunim?</h2>
                         <p className="card-desc">We built the "Operating System for Modern Businesses" to solve the transparency gap in credit transactions. Our platform ensures every entry is verified via OTP and accessible 24/7, anywhere in the world.</p>
                     </div>
 
