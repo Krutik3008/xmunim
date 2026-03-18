@@ -1,6 +1,6 @@
-# ShopMunim - Your Digital Ledger & Shop Manager
+# XMunim - Your Digital Ledger & Shop Manager
 
-ShopMunim is a professional, high-performance web application designed for shop owners to manage digital ledgers, track customer balances, and maintain a transparent transaction history. It features a modern, premium "Glassmorphism" aesthetic and is fully mobile-optimized.
+XMunim is a professional, high-performance web application designed for shop owners to manage digital ledgers, track customer balances, and maintain a transparent transaction history. It features a modern, premium "Glassmorphism" aesthetic and is fully mobile-optimized.
 
 ## ✨ Key Features
 
