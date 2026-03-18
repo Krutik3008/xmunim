@@ -82,4 +82,4 @@ Find us on your favorite app store:
 - **[Google Play](https://play.google.com/)**: Native Android experience.
 
 ## 📄 License
-&copy; 2026 ShopMunim. All rights reserved.
+&copy; 2026 XMunim. All rights reserved.
